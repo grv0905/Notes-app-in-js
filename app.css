@@ -1,0 +1,35 @@
+body{
+	background-image:linear-gradient(to bottom,#ffffff,#3498db);
+	height:100vh;
+}
+
+nav{
+	background-color:#3498db;
+}
+.navbar-brand{
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 700;
+}
+nav a{
+	color: #ffffff;
+}
+
+.search-btn{
+	background-color: white;
+	color: #3498db;
+	border: 1px solid white;
+	width: 70px;
+	height: 40px;
+	border-radius: 10px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.search-btn:hover{
+	background-color:#3498db;
+	color: white;
+}
+.noteCard{
+	background-image:linear-gradient(to bottom,#ffffff,#3498db);
+}
