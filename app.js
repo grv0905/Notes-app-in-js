@@ -11,15 +11,31 @@ addBtn.addEventListener("click", function(e) {
   } else {
     notesObj = JSON.parse(notes);
   }
+
   let myObj = {
     title: addTitle.value,
     text: addTxt.value
   }
+
+if(myObj.title=="" && myObj.text==""){
+  alert("Sorry, You haven't entered anything to add.");
+}
+
+else if(myObj.title==""){
+  alert("Sorry, You can't add a note without a title.");
+}
+ 
+else if(myObj.text==""){
+  alert("Sorry, You can't add an empty note.");
+}
+else{
   notesObj.push(myObj);
   localStorage.setItem("notes", JSON.stringify(notesObj));
   addTxt.value = "";
   addTitle.value = "";
   showNotes();
+}
+  
 });
 
 // Function to show elements from localStorage
@@ -37,7 +53,7 @@ function showNotes() {
                     <div class="card-body">
                         <h5 class="card-title">${element.title}</h5>
                         <p class="card-text"> ${element.text}</p>
-                        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+                        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger">Delete Note</button>
                     </div>
                 </div>`;
   });
